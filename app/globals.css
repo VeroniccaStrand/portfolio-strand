@@ -3,19 +3,37 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #2D3A33;  /* Mörk grågrön */
+  --foreground: #E6E0D4;  /* Ljus gråbeige */
+  --neutral: #9E827A;     /* Dämpad antikrosa */
+  --accent: #4A6651;      /* Mörk matt grågrön */
+  --secondary: #594D57;   /* Mörklila för kontrast */
+
+  --font-heading: 'Bebas Neue', sans-serif;
+  --font-body: 'Lato', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1E2420; /* Djupare grågrön för mörkt tema */
+    --foreground: #B2ADA3; /* Gråbeige för text */
+    --neutral: #7F625B;    /* Djupare antikrosa */
+    --accent: #3B4D41;     /* Ännu mörkare grågrön */
+    --secondary: #453B44;  /* Dämpad mörklila för detaljer */
   }
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+h1, h2, h3 {
+  font-family: var(--font-heading); 
+  font-weight: 400;
+  letter-spacing: .3em; 
 }
